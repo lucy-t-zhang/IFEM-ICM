@@ -1,0 +1,295 @@
+#
+#  In TURING this is where the gfortran compiler is:
+#
+F90 = /usr/bin/gfortran
+
+OBJ1= sboc.o sbpress.o scalfp.o scalfu.o scalkpp.o scalkup.o scalkuu.o 
+OBJ2= scauchy.o smaterj.o spiola.o spress.o sstif.o sstrain.o sstress.o
+OBJ3= stang.o stoxc.o strans.o stransm.o eleinit.o element.o surcon.o 
+OBJ4= acc.o assbf.o asmpr.o bdpd.o bload.o jacob.o kjbjacobi.o print.o 
+OBJ5= enbound.o fluid.o gauss.o init.o inter.o rebound.o readinit.o  
+OBJ6= load.o main.o mater.o nodalf.o press.o inputdat.o belement.o 
+OBJ7= antiskew.o skew.o strut.o timefun.o surfree.o eleleng.o sur_1d.o surdif.o 
+OBJ8= linass.o nonass.o energy.o newmark.o indexx.o con_cont.o con_vel.o  
+OBJ9= surfluid.o surele.o suracc.o smooth.o con_raw.o con_set.o
+
+run: $(OBJ1) $(OBJ2) $(OBJ3) $(OBJ4) $(OBJ5) $(OBJ6) $(OBJ7) $(OBJ8) $(OBJ9)
+
+
+
+	
+$(F90) -o run $(OBJ1) $(OBJ2) $(OBJ3) $(OBJ4) $(OBJ5) $(OBJ6) $(OBJ7) $(OBJ8) $(OBJ9)
+
+	
+surfree.o: surfree.f90
+
+$(F90) -c surfree.f90
+
+strut.o: strut.f90
+
+$(F90) -c strut.f90
+
+nonass.o: nonass.f90
+
+$(F90) -c nonass.f90
+
+inter.o: inter.f90
+
+$(F90) -c inter.f90
+
+assbf.o: assbf.f90
+
+$(F90) -c assbf.f90
+
+sstifa.o: sstifa.f90
+
+$(F90) -c sstifa.f90
+
+scalkup.o: scalkup.f90
+
+$(F90) -c scalkup.f90
+
+fluida.o: fluida.f90
+
+$(F90) -c fluida.f90
+
+surele.o: surele.f90
+
+$(F90) -c surele.f90
+
+skew.o: skew.f90
+
+$(F90) -c skew.f90
+
+rebound.o: rebound.f90
+
+$(F90) -c rebound.f90
+
+detaa.o: delta.f90
+
+$(F90) -c delta.f90
+
+surfluid.o: surfluid.f90
+
+$(F90) -c surfluid.f90
+
+stoxc.o: stoxc.f90
+
+$(F90) -c stoxc.f90
+
+nodalf.o: nodalf.f90
+
+$(F90) -c nodalf.f90
+
+inputdat.o: inputdat.f90
+
+$(F90) -c inputdat.f90
+
+asmpr.o: asmpr.f90
+
+$(F90) -c asmpr.f90
+
+sstif.o: sstif.f90
+
+$(F90) -c sstif.f90
+
+scalkpp.o: scalkpp.f90
+
+$(F90) -c scalkpp.f90
+
+fluid.o: fluid.f90
+
+$(F90) -c fluid.f90
+
+surdiff.o: surdif.f90
+
+$(F90) -c surdif.f90
+
+readinit.o: readinit.f90
+
+$(F90) -c readinit.f90
+
+con_vel.o: con_vel.f90
+
+$(F90) -c con_vel.f90
+
+con_con.o: con_cont.f90
+
+$(F90) -c con_cont.f90
+
+stanga.o: stanga.f90
+
+$(F90) -c stanga.f90
+
+mater.o: mater.f90
+
+$(F90) -c mater.f90
+
+init.o: init.f90
+
+$(F90) -c init.f90
+
+antiskew.o: antiskew.f90
+
+$(F90) -c antiskew.f90
+
+spress.o: spress.f90
+
+$(F90) -c spress.f90
+
+scalfu.o: scalfu.f90
+
+$(F90) -c scalfu.f90
+
+energy.o: energy.f90
+
+$(F90) -c energy.f90
+
+surcon.o: surcon.f90
+
+$(F90) -c surcon.f90
+
+print9.o: print9.f90
+
+$(F90) -c print9.f90
+
+con_set.o: con_set.f90
+
+$(F90) -c con_set.f90
+
+bload.o: bload.f90
+
+$(F90) -c bload.f90
+
+stang.o: stang.f90
+
+$(F90) -c stang.f90
+
+map.o: map.f90
+
+$(F90) -c map.f90
+
+ghost.o: ghost.f90
+
+$(F90) -c ghost.f90
+
+acca.o: acca.f90
+
+$(F90) -c acca.f90
+
+spiola.o: spiola.f90
+
+$(F90) -c spiola.f90
+
+scalfp.o: scalfp.f90
+
+$(F90) -c scalfp.f90
+
+element.o: element.f90
+
+$(F90) -c element.f90
+
+tridag.o: tridag.f90
+
+$(F90) -c tridag.f90
+
+suracc.o: suracc.f90
+
+$(F90) -c suracc.f90
+
+print.o: print.f90
+
+$(F90) -c print.f90
+
+load.o: load.f90
+
+$(F90) -c load.f90
+
+con_raw.o: con_raw.f90
+
+$(F90) -c con_raw.f90
+
+belement.o: belement.f90
+
+$(F90) -c belement.f90
+
+sstress.o: sstress.f90
+
+$(F90) -c sstress.f90
+
+scauchy.o: scauchy.f90
+
+$(F90) -c scauchy.f90
+
+main.o: main.f90
+
+$(F90) -c main.f90
+
+gauss.o: gauss.f90
+
+$(F90) -c gauss.f90
+
+acc.o: acc.f90
+
+$(F90) -c acc.f90
+
+smooth.o: smooth.f90
+
+$(F90) -c smooth.f90
+
+sbpress.o: sbpress.f90
+
+$(F90) -c sbpress.f90
+
+eleleng.o: eleleng.f90
+
+$(F90) -c eleleng.f90
+
+timefun.o: timefun.f90
+
+$(F90) -c timefun.f90
+
+sur_1d.o: sur_1d.f90
+
+$(F90) -c sur_1d.f90
+
+press.o: press.f90
+
+$(F90) -c press.f90
+
+jacob.o: jacob.f90
+
+$(F90) -c jacob.f90
+
+bdpd.o: bdpd.f90
+
+$(F90) -c bdpd.f90
+
+sstrain.o: sstrain.f90
+
+$(F90) -c sstrain.f90
+
+scalkuu.o: scalkuu.f90
+
+$(F90) -c scalkuu.f90
+
+force.o: force.f90
+
+$(F90) -c force.f90
+
+smaterj.o: smaterj.f90
+
+$(F90) -c smaterj.f90
+
+sboc.o: sboc.f90
+
+$(F90) -c sboc.f90
+
+eleinit.o: eleinit.f90
+
+$(F90) -c eleinit.f90
+
+
+clean:
+	/bin/rm main_res.out surfree.o strut.o nonass.o inter.o assbf.o sstifa.o scalkup.o fluida.o surele.o skew.o rebound.o delta.o surfluid.o stoxc.o nodalf.o inputdat.o asmpr.o sstif.o scalkpp.o fluid.o surdif.o readinit.o con_vel.o con_cont.o stanga.o mater.o init.o antiskew.o spress.o scalfu.o energy.o surcon.o print9.o con_set.o bload.o stang.o map.o ghost.o acca.o spiola.o scalfp.o element.o tridag.o suracc.o print.o load.o con_raw.o belement.o sstress.o scauchy.o main.o gauss.o acc.o smooth.o sbpress.o eleleng.o timefun.o sur_1d.o press.o jacob.o bdpd.o sstrain.o scalkuu.o force.o smaterj.o sboc.o eleinit.o
+	

@@ -1,0 +1,45 @@
+      subroutine concont
+      implicit real*8 (a-h,o-z)
+      include 'common'     
+      xrs(1,1)=0.0d0
+      xrs(1,2)=0.5d0     
+      xrs(2,1)=-0.5d0
+      xrs(2,2)=0.0d0     
+      xrs(3,1)=0.0d0
+      xrs(3,2)=-0.5d0     
+      xrs(4,1)=0.5d0
+      xrs(4,2)=0.0d0     
+      xrs(5,1)=0.5d0
+      xrs(5,2)=1.0d0     
+      xrs(6,1)=-0.5d0
+      xrs(6,2)=1.0d0     
+      xrs(7,1)=-1.0d0
+      xrs(7,2)=0.5d0     
+      xrs(8,1)=-1.0d0
+      xrs(8,2)=-0.5d0     
+      xrs(9,1)=-0.5d0
+      xrs(9,2)=-1.0d0     
+      xrs(10,1)=0.5d0
+      xrs(10,2)=-1.0d0     
+      xrs(11,1)=1.0d0
+      xrs(11,2)=-0.5d0
+      xrs(12,1)=1.0d0
+      xrs(12,2)=0.5d0
+      nsip(1,1)=2
+      nsip(1,2)=4
+      nsco(1,1)=2
+      nsco(1,2)=1     
+      nsip(2,1)=3
+      nsip(2,2)=1
+      nsco(2,1)=3
+      nsco(2,2)=2     
+      nsip(3,1)=4
+      nsip(3,2)=2
+      nsco(3,1)=4
+      nsco(3,2)=3
+      nsip(4,1)=1
+      nsip(4,2)=3
+      nsco(4,1)=1
+      nsco(4,2)=4
+      return
+      end
